@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%); 
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    line-height: 1;
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300, 400, 600;
+}
+
+/*************** overall container **************/
+.main{
+    width: 100vw;
+    max-width: 144rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-blue-main-BG);
+}
+
+/************ container holder ***************/
+.container{
+    width: 36rem;
+    height: 60rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: var(--very-dark-blue-card-BG);
+}
+.centered-div{
+    width: 32rem;
+margin: 2rem auto;
+}
+
+/*********** image container ******************/
+.img-container{
+    width: 32rem;
+    margin: 2rem auto 0 auto;
+    height: 55%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.img-container .svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 10px;
+}
+/************** positioning the svg image to center its container *******************************/
+.img-container .svg svg{
+    transform: translate(285%, 280%);
+    opacity: 1;
+}
+.img-container:hover .svg{
+    opacity: .68;
+    background-color: var(--cyan);
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/************ writeups ************/
+.text h1{
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: -1.9rem 0 1.5rem 0;
+    line-height: 1.5;
+}
+.text h1:hover{
+    color: var(--cyan);
+}
+.text p{
+    color: var(--soft-blue);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+/******************** designing the amount area region **************************************/
+.amount-value{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--very-dark-blue-line);
+}
+.amount-value svg{
+    margin-right: .7rem;
+}
+.amount-value div p{
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    font-weight: 400;
+}
+.amount-value >div > span{
+    color: var(--soft-blue);
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+/****************************** designing the author area ***********************************/
+.author{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--soft-blue);
+    margin: 1rem 0;
+}
+
+.author img{
+    border-radius: 50%;
+    border: 3px solid var(--very-dark-blue-line);
+    width: 4rem;
+}
+.link-name:visited, .link-name:link{
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-left: -.8rem;
+    text-decoration: none;
+}
+.link-name:hover, .link-name:active{
+    color: var(--cyan);
+}
+
+/**************************** media query *****************************************/
+@media (max-width:375px) {
+    html{
+        font-size: 50%;
+    }
+    .container{
+        width: 38rem;
+        height: 65rem;
+    }
+    .img-container .svg svg {
+        transform: translate(220%, 240%);
+    }
+    .author{
+        margin: 2rem 0;
+    }
+}
+
+
+
+
+
+.attribution {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--white);
+}
