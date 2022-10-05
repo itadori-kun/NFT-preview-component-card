@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Github URL: [Git hub link](https://github.com/itadori-kun/NFT-preview-component-card.git)
+- Netlify URL: [Netlify url](https://nft-card-component-preview-design.netlify.app/)
 
 ## My process
 
